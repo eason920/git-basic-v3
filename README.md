@@ -1,4 +1,4 @@
-# git-05-v3
+# git-basic-v3
 
 ## Project setup
 ```

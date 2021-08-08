@@ -42,12 +42,14 @@ setLocale('zh_TW')
 // STEP 4 ^
 
 const app = createApp(App)
-app.use(VueAxios, axios)
 app.use(router)
+app.use(VueAxios, axios)
+
 // STEP 5 v
 // 註冊 vee-validate 三個全域元件
 app.component('Form', Form)
 app.component('Field', Field)
 app.component('ErrorMessage', ErrorMessage)
 // STEP 5 ^
+
 app.mount('#app')

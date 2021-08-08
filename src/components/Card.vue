@@ -17,8 +17,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-.card
-  margin: 0 auto
-</style>

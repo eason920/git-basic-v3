@@ -49,11 +49,17 @@ export default {
   },
   methods: {
     signIn () {
-      const api = `${process.env.VUE_APP_API}/admin/signin`
-      console.log(this.user, api)
+      const api = `${process.env.VUE_APP_API}admin/signin`
+      // console.log(this.user, api)
       this.$http.post(api, this.user)
         .then((res) => {
           console.log(res)
+          const { token, expired } = res.data
+          console.log(res, token, expired)
+          // const expires = new Date().getTime() + 1000 * 60 * 60 * -8 + 1000 * 10 * 1 // 1000 = 0:01 // 8 為時差
+          // const token = 'token' + expires
+          console.log(expired, new Date(expired))
+          document.cookie = `easonCookie=${token};expires=${new Date(expired)}`
         })
     }
   }

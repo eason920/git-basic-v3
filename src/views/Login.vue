@@ -64,7 +64,7 @@ export default {
             console.log(expired, '/', new Date(expired))
             document.cookie = `easonCookie=${token};expires=${new Date(expired)}`
 
-            this.$router.push('/dashboard')
+            this.$router.push('/dashboard/products')
           }
         })
     }
